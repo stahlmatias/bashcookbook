@@ -1,0 +1,8 @@
+ps -l | cut -c12-15
+
+# $ cat delimited_data
+# Line [l1]
+# Line [l2]
+# Line [l3]
+
+cut -d'[' -f2 delimited_data | cut -d']' -f1
