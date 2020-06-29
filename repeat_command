@@ -1,0 +1,13 @@
+# You just typed a long and difficult command line, one with long pathnames
+# and complicated sets of arguments. Now you need to run it again. 
+
+$ /usr/bin/somewhere/someprog -g -H -yknot -w /tmp/soforthandsoon
+Error: -H not recognized. Did you mean -A?
+$ !!:s/H/A/
+/usr/bin/somewhere/someprog -g -A -yknot -w /tmp/soforthandsoon
+...
+
+Use !$ to indicate the last argument of the preceding command.
+Use !:1 for the first argument on the command line,
+!:2 for the second, and so on.
+
