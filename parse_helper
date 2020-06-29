@@ -1,0 +1,5 @@
+# Pipe the appropriate data into a while read loop and printf as needed.
+# For example, this prints the $HOSTNAME, followed by a tab, followed 
+# by any nonblank lines of output from the last command:
+
+last | while read i; do [[ -n "$i" ]] && printf "%b" "$HOSTNAME\t$i\n"; done
