@@ -1,0 +1,10 @@
+# Optional, save the "old" STDERR
+exec 3>&2
+
+# Redirect any output to STDERR to an error logfile instead
+exec 2> /path/to/error_log
+
+# Script with "globally" redirected STDERR goes here
+
+# Turn off redirect by reverting STDERR and closing FH3
+exec 2>&3-
