@@ -1,0 +1,17 @@
+find . -name '*.mp3' -print -exec mv '{}' ~/songs \;
+
+find . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
+
+find . -name '*.[Jj][Pp][Gg]' -print
+
+find . -size +3000k -print
+
+#  -mtime predicate, which checks the date of last modification. 
+
+find . -name '*.jpg' -mtime +90 -print
+
+# Use the -iname predicate (if your version of find supports it) 
+# to run a case-insensitive search, rather than just -name.
+
+find . -follow -iname '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
+
