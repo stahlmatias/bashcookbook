@@ -1,0 +1,5 @@
+
+FILE_DOS=$1
+FILE_UNIX=$2
+tr -d '\r' <$FILE_DOSs >FILE_UNIX
+
