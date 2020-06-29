@@ -1,0 +1,4 @@
+tr 'A-Z' 'a-z' <be.fore >af.ter
+
+tr '[:upper:]' '[:lower:]' <be.fore >af.ter
+
