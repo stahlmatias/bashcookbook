@@ -1,0 +1,5 @@
+temp_file="temp.$RANDOM$RANDOM$$"
+(echo 'static header line1'; cat data_file) > $temp_file \
+  && cat $temp_file > data_file
+rm $temp_file
+unset temp_file
