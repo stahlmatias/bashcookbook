@@ -1,0 +1,10 @@
+# You want to rename many files, but mv *.foo *.bar doesn’t work. 
+# Or, you want to rename a group of files in arbitrary ways.
+
+for FN in *.bad
+do
+    mv "${FN}" "${FN%bad}bash"
+done
+
+for i in *.odt; do mv "$i" "$(echo "$i" | cut -d'=' -f1,3)"; done
+
