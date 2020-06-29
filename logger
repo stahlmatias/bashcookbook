@@ -1,0 +1,7 @@
+# You’d like your script to be able to log to syslog.
+
+logger -p local0.notice -t ${0##*/}[$$] test message
+
+logger -t "${0##*/}[$$]" 'Your message here'
+
+
