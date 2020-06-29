@@ -1,0 +1,8 @@
+# If you are creating a simple patch for a single file
+
+diff -u original_file modified_file > your_patch
+
+# Count the hunks (i.e., sections of changed data) in diff’s output:
+
+diff -C0 original_file modified_file | grep -c "^\*\*\*\*\*"
+
