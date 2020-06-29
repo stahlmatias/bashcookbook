@@ -1,0 +1,4 @@
+sort -n somedata
+
+cut -d':' -f7 /etc/passwd | sort | uniq -c | sort -rn
+
